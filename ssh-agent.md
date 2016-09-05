@@ -34,10 +34,13 @@ then:
 Extra info
 ----------
 
-* The line at the end of .bashrc is to setup MOSRS access (not archer):
-    * . mosrs-setup-gpg-agent
-* The line at the end of .profile is to setup the ssh-agent:
-    * . $HOME/.ssh/ssh-setup
+The line at the end of .bashrc is to setup MOSRS access (not archer):
+
+    . mosrs-setup-gpg-agent
+
+The line at the end of .profile is to setup the ssh-agent:
+
+    . $HOME/.ssh/ssh-setup
 
 References
 ==========
