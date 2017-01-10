@@ -1,13 +1,20 @@
 Cannot log in to Archer without entering passphrase
 ===================================================
 
+Simpler (10/1/17), kill ssh-agent:
+
+    ps -flu markmuetz|grep ssh-agent
+    kill <proc_id> 
+
+Logout, then login again (this will restart ssh-agent), then:
+
+    ssh-add
+    # enter passphrase
+
 Also, ssh-add doesn't work: 
 
     ssh-add
     => Error connecting to agent: No such file or directory
-
-See [recommended way to fix problem](http://cms.ncas.ac.uk/wiki/FAQ_T4_F5). N.B.
-I haven't tried this yet.
 
 Or (worked for me 5/9/16):
 
@@ -30,6 +37,10 @@ then:
     # $ source ~um/um-training/install-ssh-keys <archer-username>@login.archer.ac.uk
     ssh mmuetz@login.archer.ac.uk
     # Should log you in without having to enter password.
+
+See also [recommended way to fix problem](http://cms.ncas.ac.uk/wiki/FAQ_T4_F5). N.B.
+I haven't tried this yet.
+
 
 Extra info
 ----------
